@@ -1,3 +1,3 @@
-from flask import Flask
+from flask import Blueprint
 
 auth = Blueprint('auth', __name__)
