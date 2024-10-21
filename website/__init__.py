@@ -1,7 +1,7 @@
 from flask import Flask
 
 def create_app():
-    app = Flask()
+    app = Flask(__name__)
     app.config['SECRET_KEY'] = 'pythons are scary'
 
     from .views import views
@@ -9,5 +9,5 @@ def create_app():
 
     app.register_blueprint(views, url_prefix='/')
     app.register_blueprint(auth, url_prefix='/')
-    
+
     return app
