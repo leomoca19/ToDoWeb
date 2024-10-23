@@ -1,7 +1,8 @@
 from flask import Blueprint
 
 views = Blueprint('views', __name__)
+colors = '<body style="background-color:black;color:green;">'
 
 @views.route('/')
 def home():
-    return '<h1>Test<1>'
+    return colors + '<h1>Test<h1>'
